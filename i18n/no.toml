@@ -11,10 +11,25 @@ other = "Unnskyld! Siden du leter etter er enten flyttet eller eksisterer ikke l
 other = "Drevet av"
 
 [home]
-other = "hjem"
+other = "Hjem"
 
 [next]
-other  = "neste"
+other  = "Neste"
 
 [prev]
-other = "forrige"
+other = "Forrige"
+
+[yourName]
+other = "Ditt navn"
+
+[phoneNumber]
+other = "Telefon nummer"
+
+[emailAddress]
+other = "E-postadresse"
+
+[message]
+other = "Beskjed"
+
+[send]
+other = "Sende"

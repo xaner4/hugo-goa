@@ -11,10 +11,25 @@ other = "Sorry! That page does not exist. It may have been removed or moved to a
 other = "Powerd by "
 
 [home]
-other = "home"
+other = "Home"
 
 [next]
-other  = "next"
+other  = "Next"
 
 [prev]
-other = "prev"
+other = "Prev"
+
+[yourName]
+other = "Your name"
+
+[phoneNumber]
+other = "Phone number"
+
+[emailAddress]
+other = "Email address"
+
+[message]
+other = "Message"
+
+[send]
+other = "Send"
