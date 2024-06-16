@@ -6,7 +6,7 @@
   {{ if ne .Params.showpagemeta false }}
   <div class="d-flex flex-column flex-md-row justify-content-between">
     <h6 class="text-start meta">
-      {{ if not .Date.IsZero }} PUBLISHED ON {{ .Date.Format (default "Jan 2, 2006" .Site.Params.dateformat) | upper }}
+      {{ if not .Date.IsZero }} {{ i18n "published" . | upper }} {{ .Date.Format (default "Jan 2, 2006" .Site.Params.dateformat) | upper }}
       {{ end }}
       / {{ math.Round (div (countwords .Content) 220.0) }} MIN READ
       {{ if isset .Params "categories" }}
@@ -15,8 +15,7 @@
       —
       {{ $total := sub $total 1 }}
       {{ range $i, $cat := sort $.Params.categories }}
-      <a class="meta"
-        href="{{ "categories/" | relURL }}{{ $cat | urlize }}">{{ $cat | upper }}</a>{{ if lt $i $total }}, {{ end }}
+      <a class="meta" href="{{ "/categories/" | relLangURL }}{{ $cat | urlize }}">{{ $cat | upper }}</a>{{ if lt $i $total }}, {{ end }}
       {{ end }}
       {{ end }}
       {{ end }}
@@ -44,8 +43,7 @@
       TAGS:
       {{ $subtotal := sub $total 1 }}
       {{ range $i, $tag := sort $.Params.tags }}
-      <a class="meta" href="{{ "tags/" | relURL }}{{ $tag | urlize }}">{{ $tag | upper }}</a>{{ if lt $i $subtotal }},
-      {{ end }}
+      <a class="meta" href="{{ '/tags/' | relLangURL }}{{ $tag | urlize }}">{{ $tag | upper }}</a>{{ if lt $i $subtotal }}, {{ end }}
       {{ end }}
       {{ end }}
       {{ end }}

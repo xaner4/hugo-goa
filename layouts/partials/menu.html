@@ -5,7 +5,7 @@
       {{ if .Section }}
       {{ with .PrevInSection }}
       <li class="menu-item">
-        <a class="menu-item" href="{{ .Permalink }}">&lt; prev</a>
+        <a class="menu-item" href="{{ .Permalink }}">&lt; {{ i18n "prev" }}</a>
       </li>
       {{ end }}
 
@@ -21,12 +21,12 @@
 
       {{ with .NextInSection }}
       <li class="menu-item">
-        <a class="menu-item" href="{{ .Permalink }}">next &gt;</a>
+        <a class="menu-item" href="{{ .Permalink }}">{{ i18n "next" }} &gt;</a>
       </li>
       {{ end }}
       {{ end }}
     </ul>
   </nav>
   {{ end }}
-  <h4 class="text-center mt-3"><a class="menu-item" href="{{ .Site.BaseURL }}">home</a></h4>
+  <h4 class="text-center mt-3"><a class="menu-item" href="{{ .Site.BaseURL }}">{{ i18n "home" }}</a></h4>
 </section>
